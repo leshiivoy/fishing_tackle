@@ -5,15 +5,16 @@ from django.shortcuts import render
 
 def index(request):
     context = {
-        'title': 'Home',
-        'content': 'Самый лучший интернет магазин рыболовных снастей - Home',
-        'list': ['first', 'second'],
-        'dict': {'first': 1},
-        'is_autenticated': False
+        'title': 'Мой первый сайт',
+        'content': 'Добро пожаловать на мой сайт.'
     }
 
     return render(request, 'main/index.html', context)
 
 
 def about(request):
-    return render(request, 'main/about.html')
+    context = {
+        'title': 'О нас',
+        'content': 'Мы создаем удивительные веб-сайты.'
+    }
+    return render(request, 'main/about.html', context)

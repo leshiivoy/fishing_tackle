@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-</head>
-<body>
-    <h3>{{ content }}</h3>
-    {% if is_autenticated %}
-        <p>{{ list.1 }}</p>
-        <p>{{dict.first }}</p>
-    {% endif %}
+{% extends "main/base.html" %}
 
-</body>
-</html>
+{% block title %}Мой первый сайт{% endblock %}
+
+{% block content %}
+    <h1>Добро пожаловать на мой сайт.</h1>
+    <p>Ассортимент магазина</p>
+
+    {% include "main/test.html" %}
+    {% include "main/test.html" %}
+    {% include "main/test.html" %}
+    {% include "main/test.html" %}
+{% endblock  %}
