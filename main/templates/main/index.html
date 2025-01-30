@@ -7,8 +7,10 @@
 </head>
 <body>
     <h3>{{ content }}</h3>
-    <p>{{ list.1 }}</p>
-    <p>{{dict.first }}</p>
-    <p>{{ bool }}</p>
+    {% if is_autenticated %}
+        <p>{{ list.1 }}</p>
+        <p>{{dict.first }}</p>
+    {% endif %}
+
 </body>
 </html>

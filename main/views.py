@@ -9,7 +9,7 @@ def index(request):
         'content': 'Самый лучший интернет магазин рыболовных снастей - Home',
         'list': ['first', 'second'],
         'dict': {'first': 1},
-        'bool': True
+        'is_autenticated': False
     }
 
     return render(request, 'main/index.html', context)
