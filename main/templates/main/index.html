@@ -1,9 +1,26 @@
 {% extends "main/base.html" %}
+{% load static %}
 
-{% block title %}Мой первый сайт{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <h1>Добро пожаловать на мой сайт.</h1>
+<div class="features">
+    <h1>{{ title }}</h1>
     <p>Ассортимент магазина</p>
+    <button class="btn btn-warning">Просто нажми</button>
+
+    {% for el in values %}
+        {% if el == 'Hello' %}
+            {% filter upper %}
+                <p>{{ el }}</p>
+            {% endfilter %}
+        {% endif %} 
+    {% endfor %}
+
+    {% for el in obj %}
+       <p>{{ el }}</p> 
+    {% endfor %}
+</div>
+    
 
 {% endblock  %}
